@@ -1,0 +1,10 @@
+Malware analysis and detection machine learning 
+
+Algorithm / Model Used: Extra Tree Classifier
+Accuracy Train score: 97.42% and test score: 97.23%
+*******************************************************
+Algorithm / Model Used: Logistic Regression
+Accuracy Train score: 94.84% and test score: 93.67%
+
+
+

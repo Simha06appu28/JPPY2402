@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Malware analysis and detection machine learning </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/assets/css/chart.css">
+    <link rel="stylesheet" href="../static/assets/css/owl.css">
+<!--
+
+Finance Business TemplateMo
+
+https://templatemo.com/tm-545-finance-business
+
+-->
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+     
+    
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="{{url_for('index')}}"><h2>Malware Detection</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('index')}}">Home</a>
+              </li>  
+                                    
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('upload')}}">Upload</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('prediction')}}">Prediction</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('performance')}}">Performance_Analysis</a>
+              </li>
+               
+
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+      <div class="container">
+         
+            <h1>Chart</h1>
+            <span>Malware Detection</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+      <div class="container">
+        <br>
+        <br>
+       <center> <h1>Result</h1></center>
+         
+
+       <html lang="en">
+        
+       <head>
+         <meta charset="utf-8">
+         <meta content="width=device-width, initial-scale=1.0" name="viewport">
+         <title>Result: Diabetes Prediction</title>
+         <link rel="stylesheet" href="../static/css/result.css">
+       </head>
+       
+       <body>
+       
+         <div class="information">
+           <div class="info">
+           
+       
+             <div style="margin-left:150px">   <table>
+           
+           
+                 <td> The following information was provided by you:</td>
+               <br>
+               <br>
+               <tr>
+                <th>Input</th>
+                      <th>Output</th>
+               </tr>
+               <tr>
+                 <td>ACCESS_ALL_DOWNLOADS:</td>
+                 <td>{{access_all}}</td>
+               </tr>
+               <tr>
+                 <td>ACCESS_CACHE_FILESYSTEM:</td>
+                 <td>{{access_cache}}</td>
+               </tr>
+               <tr>
+                 <td>ACCESS_FINE_LOCATION</td>
+                 <td>{{access_fine}}</td>
+               </tr>
+               <tr>
+                 <td>ACCESS_NETWORK_STATE</td>
+                 <td>{{access_net}}</td>
+               </tr>
+               <tr>
+                 <td>ACCESS_SERVICE</td>
+                 <td>{{access_ser}}</td>
+               </tr>
+               <tr>
+                 <td>ACCESS_SHARED_DATA</td>
+                 <td>{{access_sha}}</td>
+               </tr>
+               
+               <tr>
+                 <td>ACCESS_SUPERUSER</td>
+                 <td>{{access_sup}}</td>
+               </tr>
+               <tr>
+                   <td>ACCESS_WIFI_STATE</td>
+                   <td>{{access_wifi}}</td>
+                 </tr>
+                 <tr>
+                   <td>CAMERA</td>
+                   <td>{{camera}}</td>
+                 </tr>
+
+                 <tr>
+                  <td>CHANGE_CONFIGURATION</td>
+                  <td>{{change}}</td>
+                </tr>
+                
+                <tr>
+                  <td>DELETE_CACHE_FILES</td>
+                  <td>{{delete}}</td>
+                </tr>
+                <tr>
+                    <td>READ_ATTACHMENT</td>
+                    <td>{{read_atta}}</td>
+                  </tr>
+                  <tr>
+                    <td>READ_CONTACTS</td>
+                    <td>{{read_cont}}</td>
+                  </tr>
+
+
+                  <tr>
+                    <td>READ_DATA</td>
+                    <td>{{read_data}}</td>
+                  </tr>
+ 
+                  <tr>
+                   <td>READ_EXTERNAL_STORAGE</td>
+                   <td>{{read_extra}}</td>
+                 </tr>
+                 
+                 <tr>
+                   <td>READ_GMAIL</td>
+                   <td>{{read_g}}</td>
+                 </tr>
+                 <tr>
+                     <td>READ_HISTORY_BOOKMARKS</td>
+                     <td>{{read_hi}}</td>
+                   </tr>
+                   <tr>
+                     <td>READ_MESSAGES</td>
+                     <td>{{read_mess}}</td>
+                   </tr>
+
+
+
+                   <tr>
+                    <td>READ_PHONE_STATE</td>
+                    <td>{{read_phone}}</td>
+                  </tr>
+ 
+                  <tr>
+                   <td>READ_SETTINGS</td>
+                   <td>{{read_sett}}</td>
+                 </tr>
+                 <tr>
+                  <td>READ_SMS</td>
+                  <td>{{read_sms}}</td>
+                </tr>
+                 <tr>
+                   <td>RECEIVE_BOOT_COMPLETED</td>
+                   <td>{{rece_boot}}</td>
+                 </tr>
+                 <tr>
+                     <td>RECEIVE_SMS</td>
+                     <td>{{rece_sms}}</td>
+                   </tr>
+                   
+
+               <tr>
+                 <td>Prediction</td>
+                 <td>{{prediction_text}}</td>
+               </tr>
+
+               <tr>
+                <td>Model</td>
+                <td>{{model}}</td>
+              </tr>
+             </table></div>
+       
+           </div>
+         </div>
+          
+         <!-- Vendor JS Files -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+         <button  class="btn btn-success" id="download-pdf">Download PDF</button>
+
+         <script>
+           const btn = document.getElementById('download-pdf');
+           const table = document.querySelector('.information table');
+         
+           btn.addEventListener('click', function() {
+             var opt = {
+               margin: 1,
+               filename: 'medical_results.pdf',
+               image: { type: 'jpeg', quality: 1 },
+               html2canvas: { scale: 2 } // Increase scale for better quality on high-resolution displays
+             };
+             html2pdf().set(opt).from(table).save();
+           });
+         </script>
+         
+         
+       
+       </body>
+       
+       </html>
+
+
+
+          </div>
+        </div>
+      </div>
+   
+
+     
+    
+
+
+ 
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="../static/assets/js/custom.js"></script>
+    <script src="../static/assets/js/owl.js"></script>
+    <script src="../static/assets/js/slick.js"></script>
+    <script src="../static/assets/js/accordions.js"></script>
+
+    
+
+  </body>
+</html>

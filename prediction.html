@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Malware analysis and detection machine learning </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/assets/css/prediction.css">
+    <link rel="stylesheet" href="../static/assets/css/owl.css">
+<!--
+
+Finance Business TemplateMo
+
+https://templatemo.com/tm-545-finance-business
+
+-->
+<style>
+            
+            h1 {
+    text-transform: capitalize;
+}           
+            
+  h1 {
+      color:#e40c0c;
+  }
+  td{
+color: #e40c0c;
+}
+select
+{
+  color:#e40c0c; 
+}
+input
+{
+  color: #e40c0c; 
+}
+</style>
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+     
+    
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="{{url_for('index')}}"><h2>Malware Detection</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('index')}}">Home</a>
+              </li>  
+                                       
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('upload')}}">Upload</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('prediction')}}">Prediction</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('performance')}}">Performance_Analysis</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Prediction</h1>
+            <span>Malware Detection</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+      <div class="container">
+        
+        <div class="col-md-8 col-lg-6" style="margin-left:460px">
+            <section class='tabs-content'>
+              <br>
+              <br>
+              <div class="col-md-16 col-lg-13" style="margin-left:-100px">
+              <span>Android Permission-based features,which are harmless with malware software for Android devices</span>
+              <h1>Malware Prediction</h1>
+               </div>
+              <!-- <span>The dataset was created in a Unix / Lunix-based virtual machine for classification purposes, which are harmless with malware software for Android devices </span> -->
+             
+          </div>
+                
+		 
+          <form action="{{ url_for('predict')}}" method="POST">
+            <div class="section-title">
+     
+     
+            </div>
+                <div class="scrollable">
+                
+                   <center>     <table> </center> 
+                    <tbody>
+                        
+                             
+                            
+                         <td>ACCESS_ALL_DOWNLOADS:</td>
+                          <td>
+                              <select type="text" name="ACCESS_ALL_DOWNLOADS" method="post" required="required" placeholder="ACCESS_ALL_DOWNLOADS" width="200" style="width: 200px">
+                               
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                          
+                          <td>ACCESS_CACHE_FILESYSTEM:</td>
+                          <td>
+                              <select type="text" name="ACCESS_CACHE_FILESYSTEM" method="post" required="required" placeholder="ACCESS_CACHE_FILESYSTEM" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                             </tbody>
+                        <!-- Row 1 -->
+                        <tbody>
+
+                            <td>ACCESS_FINE_LOCATION:</td>
+                          <td>
+                              <select type="text" name="ACCESS_FINE_LOCATION" method="post" required="required" placeholder="ACCESS_FINE_LOCATION" width="200" style="width: 200px">
+                               
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                          
+                          <td>ACCESS_NETWORK_STATE:</td>
+                          <td>
+                              <select type="text" name="ACCESS_NETWORK_STATE" method="post" required="required" placeholder="ACCESS_NETWORK_STATE" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                                 
+                                
+                            
+                        </tbody>
+                        
+                        <!-- Row 2 -->
+                        <tbody>
+
+
+
+                           <td>ACCESS_SERVICE:</td>
+                          <td>
+                              <select type="text" name="ACCESS_SERVICE" method="post" required="required" placeholder="ACCESS_SERVICE" width="200" style="width: 200px">
+                               
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                          
+                          <td>ACCESS_SHARED_DATA:</td>
+                          <td>
+                              <select type="text" name="ACCESS_SHARED_DATA" method="post" required="required" placeholder="ACCESS_SHARED_DATA" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                               
+                                
+                            
+                        </tbody>
+                        
+                     
+                        <!-- Row 4 --></br>
+                        <tbody>
+
+
+                     
+                           <td>ACCESS_SUPERUSER:</td>
+                          <td>
+                              <select type="text" name="ACCESS_SUPERUSER" method="post" required="required" placeholder="ACCESS_SUPERUSER" width="200" style="width: 200px">
+                               
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                          
+                          <td>ACCESS_WIFI_STATE:</td>
+                          <td>
+                              <select type="text" name="ACCESS_WIFI_STATE" method="post" required="required" placeholder="ACCESS_WIFI_STATE" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                                
+                                
+                                
+                        </tbody>
+                        <!-- Row 5 -->
+                        <tbody>
+
+                          
+                           <td>CAMERA:</td>
+                          <td>
+                              <select type="text" name="CAMERA" method="post" required="required" placeholder="CAMERA" width="200" style="width: 200px">
+                               
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                          
+                          <td>CHANGE_CONFIGURATION:</td>
+                          <td>
+                              <select type="text" name="CHANGE_CONFIGURATION" method="post" required="required" placeholder="CHANGE_CONFIGURATION" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                                
+                                
+                                
+                            </tbody>
+
+
+
+                            <tbody>
+
+                              
+    
+
+                                <td>DELETE_CACHE_FILES:</td>
+                          <td>
+                              <select type="text" name="DELETE_CACHE_FILES" method="post" required="required" placeholder="DELETE_CACHE_FILES" width="200" style="width: 200px">
+                               
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                          
+                          <td>READ_ATTACHMENT:</td>
+                          <td>
+                              <select type="text" name="READ_ATTACHMENT" method="post" required="required" placeholder="READ_ATTACHMENT" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                                        
+                                        
+                                        
+                                    </tbody>
+
+
+
+
+                                    <tbody>
+                                               <td>READ_CONTACTS:</td>
+                          <td>
+                              <select type="text" name="READ_CONTACTS" method="post" required="required" placeholder="READ_CONTACTS" width="200" style="width: 200px">
+                               
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                          
+                          <td>READ_DATA:</td>
+                          <td>
+                              <select type="text" name="READ_DATA" method="post" required="required" placeholder="READ_DATA" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                                            
+                                            
+                                        </tbody>
+
+
+                                        <tbody>
+                                                                   <td>READ_EXTERNAL_STORAGE:</td>
+                          <td>
+                              <select type="text" name="READ_EXTERNAL_STORAGE" method="post" required="required" placeholder="READ_EXTERNAL_STORAGE" width="200" style="width: 200px">
+                               
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                          
+                          <td>READ_GMAIL:</td>
+                          <td>
+                              <select type="text" name="READ_GMAIL" method="post" required="required" placeholder="READ_GMAIL" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                                 
+                                                
+                                                
+                                                
+                                            </tbody>
+
+
+<tbody>
+                                          <td>READ_HISTORY_BOOKMARKS:</td>
+                          <td>
+                              <select type="text" name="READ_HISTORY_BOOKMARKS" method="post" required="required" placeholder="READ_HISTORY_BOOKMARKS" width="200" style="width: 200px">
+                               
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                          
+                          <td>READ_MESSAGES:</td>
+                          <td>
+                              <select type="text" name="READ_MESSAGES" method="post" required="required" placeholder="READ_MESSAGES" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                                
+
+  </tbody>
+
+<tbody>
+                                          <td>READ_PHONE_STATE:</td>
+                          <td>
+                              <select type="text" name="READ_PHONE_STATE" method="post" required="required" placeholder="READ_PHONE_STATE" width="200" style="width: 200px">
+                               
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                          
+                          <td>READ_SETTINGS:</td>
+                          <td>
+                              <select type="text" name="READ_SETTINGS" method="post" required="required" placeholder="READ_SETTINGS" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                                
+
+  </tbody>
+
+
+
+
+<tbody>
+                                          <td>READ_SMS:</td>
+                          <td>
+                              <select type="text" name="READ_SMS" method="post" required="required" placeholder="READ_SMS" width="200" style="width: 200px">
+                               
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                          
+                          <td>RECEIVE_BOOT_COMPLETED:</td>
+                          <td>
+                              <select type="text" name="RECEIVE_BOOT_COMPLETED" method="post" required="required" placeholder="RECEIVE_BOOT_COMPLETED" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+                                
+
+  </tbody>
+
+
+                            <tbody>
+
+ <td>RECEIVE_SMS:</td>
+                          <td>
+                              <select type="text" name="RECEIVE_SMS" method="post" required="required" placeholder="RECEIVE_SMS" width="200" style="width: 200px">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option> 
+                                   
+                                 
+                              
+                                 
+                              </select>
+                          </td>
+
+
+
+                        <td>Model:</td>
+                        <td>
+                            <select type="text" name="model" method="post" required="required" placeholder="Model" width="200" style="width: 200px">
+                               
+                     
+                     <option value="ExtraTreeClassifier">ExtraTreeClassifier</option> 
+                     <option value="LogisticRegression">LogisticRegression</option>
+                     
+                   
+                 
+                 
+                 
+                 
+                            </select>
+                        </td>
+            
+                      
+            
+            
+             </tbody> 
+    
+                        
+                    </table>
+                    </br>
+                    </br>
+                    <div class="center">
+                      <center>  <button type="submit" class="btn btn-primary ">Predict</button> </center> 
+                    </div>
+                </div>
+            </form>
+            <br>
+            <br>
+            
+
+
+            </section>
+          </div>
+        </div>
+      </div>
+   
+
+     <br>
+     <br>
+    
+
+
+    <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+           
+        </div>
+      </div>
+    </footer>
+    
+    <div class="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+             
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="../static/assets/js/custom.js"></script>
+    <script src="../static/assets/js/owl.js"></script>
+    <script src="../static/assets/js/slick.js"></script>
+    <script src="../static/assets/js/accordions.js"></script>
+
+    
+
+  </body>
+</html>
